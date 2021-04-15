@@ -4,11 +4,15 @@
     font-family: 'Raleway', sans-serif;
 
 }
+body{
+    margin: 0;
+    padding: 0;
+}
 
 #all_body{
     width: 96%;
     padding: 0px;
-    margin: auto;
+    margin: 0 auto;
 }
 a, ul{ 
     list-style-type: none;
@@ -17,27 +21,50 @@ a, ul{
 header{
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     max-width: 1450px;
-    margin: auto;
-
+    padding: 20px 0px; 
 }
+
+header img{
+    position: relative;
+    top: 4px;
+    left: 15px; 
+    }
 
 #header_nav ul{
     display: flex;
 }
 #header_nav li{
     margin: 0px 28px;
+    align-items: center;
+  
 }
+
+#header_nav .Activités {
+    color: black;
+}
+#header_nav .Hébergement {
+    color: #0065FC
+}
+
+#header_nav .inscrire {
+    color: #0065FC;
+    font-weight: 500;
+}
+
 #header_nav a{
     font-size: 1.1em;
-    color: #0065FC;
+    padding: 32px 18px 20px 18px;
+    
 }
 
 #header_nav a:hover{
     border-top: 3px solid blue;
-    padding-top: 20px;
+    border-bottom: none;
+    color: #0065FC;
 }
+
 
 #Search_1{
     padding: 0px;
@@ -45,7 +72,6 @@ header{
 }
 
 #Search_1 h1{
-    margin-top: 30px;
     font-size: 1.8em;
     margin-bottom: 0px;
 }
@@ -56,7 +82,7 @@ header{
 }
 
 #Search_2 form{
-    display: inline-flex;
+    display: flex;
     max-width: 100%;
     overflow: auto;
 }
@@ -64,8 +90,7 @@ header{
 #location_logo{
     background-color: #F2F2F2;
     border-radius: 15px 0 0 15px;
-    text-align: center;
-    padding: 14px 16px;
+    padding: 15px 16px;
 }
 
 .Search_area{
@@ -74,7 +99,7 @@ header{
     border-top: #F2F2F2 2px solid;
     border-bottom: #F2F2F2 2px solid;
     padding: 0 25px 0 15px;
-    width: 200px;
+    width: 20%;
     font-size: 1em;
     font-weight: bold;
     font-family: "Raleway", "Sans serif";
@@ -93,10 +118,13 @@ header{
     font-weight: bold;
     border: none;
     border-radius: 0 15px 15px 0;
-    padding: 14px 16px;
+    padding: 15px 16px;
     font-family: "Raleway", "Sans serif";
     font-size: 1rem;
     cursor: pointer;
+}
+#Search_button i{
+    display: none;
 }
 
 #Sec2{
@@ -117,6 +145,13 @@ header{
     padding: 16px;
 }
 
+#Sec2 a:hover{
+    background-color: rgb(197, 196, 196);
+    box-shadow: 2px 2px 4px black;
+    color: #0065FC;
+    
+}
+
 #Sec2 i{
     color: #0065FC;
     background-color: #F2F2F2;
@@ -125,6 +160,7 @@ header{
     padding: 18px 18px;
     margin: -20px;    
 }
+
 #Sec2 span{
     margin-left: 25px;
 }
@@ -141,9 +177,8 @@ header{
     font-size: 1em;
     margin-right: 15px;
     border: 2px solid rgb(230, 223, 223);
-    padding: 10px 12px 10px 10px;
+    padding: 7px 12px 7px 10px;
     border-radius: 50%;
-    text-align: center;
 }
 
 /*----------------------------article section--------------------------------*/
@@ -152,6 +187,7 @@ header{
 #sec3_hosting{
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 
@@ -175,12 +211,6 @@ header{
     font-weight: bold;
 }
 
-.hosting_div:hover{
-    transform: scale(1.1);
-    transition: 0.4s ease-in-out;
-}
-
-
 #section_3{
     display: flex;
     flex-direction: row;
@@ -188,21 +218,26 @@ header{
 }
 
 
-.hosting_div{
+#sec3_hosting .hosting_div a{
     background-color: white;
     border-radius: 20px;
     margin: 20px;
     padding: 6px;
     box-shadow: 1px 1px 5px rgb(119, 117, 117);
     box-sizing: border-box;
-    height: 100%;
+    height: 85%;
     overflow: auto;
     float: left;
-    width: 260px;
+    width: 270px;
     min-width:auto;
 }
 
-.hosting_div img{
+#sec3_hosting div a:hover{
+    transform: scale(1.1);
+    transition: 0.4s ease-in-out;
+}
+
+.hosting_div a img{
     height: 100px;
     object-fit: cover;
     max-width: 100%;
@@ -256,7 +291,7 @@ header{
 }
 
 .aside_main a img{
-    object-fit: cover;
+    object-fit:cover;
     max-width: 100%;
     max-height: 100%;
     border-radius: 15px 0 0 15px;
@@ -282,6 +317,9 @@ header{
     float: right;
     margin: 4px;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    
 }
 
 #aside_header{
@@ -318,27 +356,21 @@ header{
 
 /*----------------------------section 4--------------------------------*/
 #section_4{
-    margin-top: 50px;
-    margin-bottom: 40px;
+    margin: 30px auto;
 }
 
 #section4_pics{
     display: grid;
-    grid-gap: 15px;
-    grid-template-columns: repeat(auto-fit, 1fr);
-    grid-template-rows: repeat(2, 250px);
-    grid-template-areas:
-    "pic1 pic2 pic3 pic4"
-    "pic1 pic5 pic3 pic6";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 2rem 10rem 2rem 2rem 2rem 10rem;
+    grid-gap: 20px;
 }
 
 #section4_pics div{
-    height: auto;
-    box-shadow: 0 0 10px rgb(59, 59, 59);
+    box-shadow: 0 0 6px rgb(59, 59, 59);
     border-radius: 20px;
     background-color:white;
     overflow: hidden;
-    margin: 8px;
 }
 
 #section4_pics div:hover{
@@ -346,51 +378,69 @@ header{
     transition: 0.4s ease-in-out;
 }
 
-#section4_pics > a {
-    height: 87%;
+#section4_pics div a {
     object-fit: cover;
     width: 100%;
     max-height: 100%;
     max-width: 100%;
     border-radius: 15px 15px 0 0;
 }
-.activ_pic > img {
-    height: 87%;
+div .activ_pic img {
+    height: 82%;
     width: 100%;
-    object-fit: cover;
+    object-fit:cover;
 }
 
-
+div .activ_pic1 img {
+    height: 92%;
+    width: 100%;
+    object-fit:cover;
+} 
 
 #section4_pics h3{
     color: black;
-    margin: 2px 15px 22px 22px;
+    font-weight: bold;
+    margin: 2px 0 0 10px;
 }
 
 .sec4_pic1{
     grid-area: pic1;
+    grid-column: 1 / 2;
+    grid-row: 1 / 7;
 }
 
 .sec4_pic2{
     grid-area: pic2;
+    grid-column: 2 / 3;
+    grid-row: 1 / 5;
+  
 }
 
 .sec4_pic3{
     grid-area: pic3;
- }
+    grid-column: 3 / 4;
+    grid-row: 1 / 7;
+}
+
 .sec4_pic4{
     grid-area: pic4;
+    grid-column: 4 / 5;
+    grid-row: 1 / 3;
+    
+
  }
- .sec4_pic5{
+.sec4_pic5{
     grid-area: pic5;
- }
+    grid-column: 2 / 3;
+    grid-row: 5 / 7;
+
+}
  
- .sec4_pic6{
+.sec4_pic6{
     grid-area: pic6;
-
- }
-
-
+    grid-column: 4 / 5;
+    grid-row: 3 / 7;
+}
 
 
 /*----------------------------footer--------------------------------*/
@@ -423,26 +473,68 @@ footer{
 }
 
 @media screen and (max-width: 1200px) {
+
+    #all_body{
+        margin: auto;
+    }
     #section_3{
         display: flex;
-        flex-direction: column;}
+        flex-direction:column-reverse;
+        }
     #The_hosting_popular{
-        margin-top: 15px;}
+        margin-bottom: 15px;}
+
     #aside_content{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;}
 
+    div .activ_pic1 img {
+        height: 84%;
+} 
+
+    #section_4{
+        width: 100%;}
 
     #section4_pics{
         display: grid;
         grid-column-gap: 15px;
         grid-row-gap: 15px;
-        grid-template-columns: repeat(auto-fit, 1fr);
-        grid-template-rows: repeat(auto-fit, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 200px);
         grid-template-areas:
         "pic1 pic2 pic3" 
         "pic4 pic5 pic6"}
+
+    figure .activ_pic img , figure .activ_pic1 img {
+        height: 76%;
+
+}
+
+    .sec4_pic1{
+        grid-area: pic1;
+    }
+
+    .sec4_pic2{
+        grid-area: pic2;
+        
+    }
+
+    .sec4_pic3{
+        grid-area: pic3;
+    }
+
+    .sec4_pic4{
+        grid-area: pic4;
+    }
+
+    .sec4_pic5{
+        grid-area: pic5;
+    }
+    
+    .sec4_pic6{
+        grid-area: pic6;
+    }
 
 }
 
@@ -457,22 +549,30 @@ footer{
     #Sec2{
         display: grid;
         grid-column-gap: 15px;
+        grid-row-gap: 5px;
         grid-template-columns: repeat(auto-fit, 1fr);
         grid-template-rows: repeat(auto-fit, 1fr);
         grid-template-areas:
         "Eco_part Family_part"
         "Romantic_part Animal_part"}
               
-    }
+    
     #Sec2 div{
-        margin: 20px;
+        margin: 20px;}
+
+    #sec3_hosting .hosting_div a{
+        width: 230px;}
+
+    .Search_area{
+        width: 25%;
+        
     }
+}
 
 @media screen and (max-width: 680px) {
-    .hosting_div{
-       width: auto;}
-
-}
+    #sec3_hosting .hosting_div a{
+        width: auto;}
+    }
 
 
 @media screen and (max-width: 650px) {
@@ -480,13 +580,51 @@ footer{
         display: grid;
         grid-column-gap: 15px;
         grid-row-gap: 15px;
-        grid-template-columns: repeat(auto-fit, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(auto-fit, 1fr);
         grid-template-areas:
         "pic1 pic2"
         "pic3 pic4"
         "pic5 pic6"}
 
+
+    figure .activ_pic img , figure .activ_pic1 img {
+        height: 76%;
+}
+
+    .sec4_pic1{
+        grid-area: pic1;
+    }
+
+    .sec4_pic2{
+        grid-area: pic2;
+        
+    }
+
+    .sec4_pic3{
+        grid-area: pic3;
+    }
+
+    .sec4_pic4{
+        grid-area: pic4;
+    }
+
+    .sec4_pic5{
+        grid-area: pic5;
+    }
+    
+    .sec4_pic6{
+        grid-area: pic6;
+    }
+
+    header{
+        max-width: 650px;
+    }
+    
+    #section_1, #section_2 {
+        margin-left: 15px;
+      
+    }
 }
 
 @media screen and (max-width: 640px) {
@@ -504,20 +642,89 @@ footer{
         "Eco_part"
         "Family_part"
         "Romantic_part"
-        "Animal_part"
+        "Animal_part";
     }
 
     #Sec2 div{
         margin: 20px;
     }
+
+    #all_body{
+        width: 100%;
+        padding: 0px;
+        margin: 0px;}
+
+    #header_nav{
+        overflow: hidden;
 }
+
+    header{
+         max-width: 640px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    header {
+        position: relative;
+        margin-bottom: 60px;
+        max-width: 600px ;
+    }
+
+    #header_nav .inscrire {
+     margin-right: 0px;
+    }
+  
+    #header_nav .Hébergement, #header_nav .Activités {
+        
+        max-width: 100%;
+        position: absolute;
+        top: 60px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #header_nav .Hébergement{
+         left: 0px;
+         width: 45%;
+         align-items: center;
+         border-bottom: 3px solid rgb(207, 203, 203);
+    }
+    #header_nav .Hébergement:hover{
+        border-top: none;
+        border-bottom: 3px solid blue;}
+
+    #header_nav .Activités{
+           right: 0px;
+           width: 45%;
+           align-items: center;
+           border-bottom: 3px solid rgb(207, 203, 203);
+    }    
+    #header_nav .Activités:hover{
+        border-top: none;
+        border-bottom: 3px solid blue;}
+
+    #header_nav .inscrire{
+        margin-right: 20px;
+    }
+
+    #header_nav .inscrire:hover{
+        border-top: none;
+        font-weight: 600; 
+    }
+      
+    #Search_1 h1{
+        margin-top: 5px;
+        font-size: 1.8em;
+        margin-bottom: 0px;}
+
+ } 
 
 @media screen and (max-width: 550px) {
     #section4_pics{
         display: grid;
-        grid-column-gap: 15px;
         grid-row-gap: 15px;
-        grid-template-columns: repeat(auto-fit, 1fr);
+        grid-template-columns: 1fr;
         grid-template-rows: repeat(auto-fit, 1fr);
         grid-template-areas:
         "pic1" 
@@ -527,7 +734,107 @@ footer{
         "pic5"
         "pic6"}
 
-    #header_nav li{
-        margin: 0px 12px;}
+
+    figure .activ_pic img , figure .activ_pic1 img {
+        height: 76%;    
+    }
+    
+    .sec4_pic1{
+        grid-area: pic1;
+    }
+    
+    .sec4_pic2{
+        grid-area: pic2;
+            
+    }
+    
+    .sec4_pic3{
+        grid-area: pic3;
+    }
+    
+    .sec4_pic4{
+        grid-area: pic4;
+    }
+    
+    .sec4_pic5{
+        grid-area: pic5;
+    }
+        
+    .sec4_pic6{
+        grid-area: pic6;}
+
+    
+    .Search_area{
+       width: 160px;
+       font-size: .8em;}
+
+    .aside_main a{
+        width: 340px;
+        height: 130px;
+        padding-top: 2px;}
+
+    #The_hosting_popular{
+        width: 310px;
+        border-radius: 0;
+        width: auto;
+    }
+
+    #aside_header i {
+        position: absolute;
+        right: 15px;
+        top: 8px;
+    }
+
+    #The_hosting{
+        background-color: white;}
+
+
+    .The_button{
+        display: none;
+    }
+
+    #Search_button i{
+        background-color: #0065FC;
+        display: block;
+        color: white;
+        padding-top: 22px;
+        padding-left: 20px;
+        padding-right: 20px;
+        height: 43px;
+        font-weight: bold;
+        border-radius: 15px;
+        cursor: pointer;
+        position: relative;
+        right: 15px;
+        bottom: 1px;
+    }
+
+    .Search_area{
+        width: 100%;
+        font-size: 1.1em;
+        font-weight: bold;}
+
+    .Search_area::placeholder{
+        color: black;}
+
+    .footer_main{
+        width: 60%;}
+        
+    #all_footer a{
+        margin: 10px 0;
+    }
+
+    #sec3_hosting .hosting_div a{
+        width: 350px;
+    }
+
+    #section4_pics{
+        width: 340px;
+        margin: 0px auto;
+    }
+
+    .activity_title{
+        margin-left: 5px;
+    }
 
 }
